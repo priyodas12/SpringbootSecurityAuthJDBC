@@ -16,6 +16,7 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    //query for fetching user data from mysql
     private static String userDetailsQuery="SELECT USER_NAME,USER_PASSWORD,IS_ENABLED FROM userdata WHERE USER_NAME=?";
     private static String userRolesQuery="SELECT USER_NAME,USER_ROLE FROM userdata WHERE USER_NAME=?";
 
